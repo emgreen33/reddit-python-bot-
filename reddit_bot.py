@@ -21,7 +21,7 @@ while True:
     subreddit = reddit.subreddit("beachparty")
 
   for submission in subreddit.new(limit=5):
-    message = 'Hi there, ' + submission.author.name + ' has made a new post in BP, ' +"[" + submission.title + "](" + submission.permalink + "). To shut me up click [here](" + xxx +"). Have a great day!"
+    message = 'Hi there, ' + submission.author.name + ' has made a new post in BP, ' +"[" + submission.title + "](" + submission.permalink + "). To shut me up click the block user button below. Have a great day!"
     if submission.id not in posts_notified:
       with open("approved_submitters.txt", "r") as f:
         usernames = f.read()
